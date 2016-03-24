@@ -1,14 +1,14 @@
 + Créer une nouvelle feature (unité logique) :
-    - git checkout -b feature-name
+    - git checkout -b <feature-name>
 + Ajouter des fichiers/des modfis:
-    - git add -A fichier (ou git status pour voir ce qui va être ajouter et git commit -A pour tout ajouter)
+    - git add -A <fichier>
 + commit en local:
-    - git commit -m "message de commit" (version tout ce qui a été ajouté avant)
+    - git commit -m "message de commit"
 + Enregistrer sur son fork sa feature:
-    - git push origin feature-name
+    - git push origin <feature-name>
 + Lorsque la Feature est terminée, soumettre une pull request dans l’interface github
 + Lorsque la pull request est mergé, supprimer la branche de son fork:
-    - git branch -d feature-name et du serveur: git push origin --delete feature-name
+    - git branch -d <feature-name> et du serveur: git push origin --delete <feature-name>
 + Update son fork local+ serveur :
     - git pull upstream master & git push origin master
 + Fusionner sa branche

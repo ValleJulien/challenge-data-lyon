@@ -39,12 +39,14 @@ class AutoCompleteController extends Controller
       foreach ($arrayFeatures as $feature) {
         array_push($arrayTown, $feature["properties"]["commune"]);
       }
-
       // get unique entry for array
-      $result = array_unique($arrayTown);
+      $results = array_unique($arrayTown);
       // get only vales of array after do array_unique (no index)
-      $whatIReallyNeed = array_values($result);
-
+      $whatIReallyNeed = array_values($results);
+      foreach ($results as $result) {
+        echo $result."<br>";
+      }
+      die;
       // set charset
       $charset = "UTF-8";
       //set content type
