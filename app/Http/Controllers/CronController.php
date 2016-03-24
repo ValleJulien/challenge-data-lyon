@@ -14,14 +14,14 @@ use Javascript;
 class CronController extends Controller
 {
 	/**
-	 * @return json response 
+	 * @return json response
 	 */
 	public static function updateJson(Request $request)
 	{
 		//définition du json header response
 		$type="application/json";
 		$charset="utf-8";
-		
+
 		$path = 'database/market.json';
 
 		//Dernière date de modification du fichier
@@ -33,7 +33,7 @@ class CronController extends Controller
 		//date du jour
 		$now = date('Y-M-d');
 
-		//Si date du jour >= date de dernière modif : on remplace le fichier 
+		//Si date du jour >= date de dernière modif : on remplace le fichier
 		if($now >= $updateMonth)
 		{
 			$data = file_get_contents('https://download.data.grandlyon.com/wfs/grandlyon?SERVICE=WFS&VERSION=2.0.0&outputformat=GEOJSON&request=GetFeature&typename=gin_nettoiement.ginmarche&SRSNAME=urn:ogc:def:crs:EPSG::4171');

@@ -48,4 +48,12 @@ Route::get('/cron', 'CronController@updateJson');
 | The routes are calling the respective models to retrieve the data from the database.
 | return Response::json(…) returns the results in JSON format.
 */
-Route::get('/allTowns', 'ApiTownController@getTowns');
+Route::get('/api/available-towns', 'ApiTownController@getApiTowns');
+
+Route::get('/api/town-info/{name}', 'ApiTownController@getApiTownsInfo');
+
+Route::get('/api/markets-in-town/{name}', 'ApiTownController@getApiMarketsByTown');
+
+Route::get('/api/available-markets', 'ApiMarketController@getApiMarkets');
+
+

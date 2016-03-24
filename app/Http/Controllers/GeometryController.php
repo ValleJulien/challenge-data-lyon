@@ -62,7 +62,6 @@ class GeometryController extends Controller
                                   )
         );
       }
-
     }
 
     $type = "application/json";

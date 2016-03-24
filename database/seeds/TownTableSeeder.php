@@ -30,7 +30,8 @@ class TownTableSeeder extends Seeder
       $whatIReallyNeed = array_values($results);
       foreach ($results as $result) {
         DB::table('town')->insert([
-            'name' => $result,
+            'name' => strtolower($result),
+            'created_at' => $now = date('Y-M-d H:i:s')
         ]);
       }
     }
